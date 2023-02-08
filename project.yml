@@ -34,6 +34,8 @@ targets:
       path: unit-tests/Info.plist
     sources:
       - path: unit-tests
+    dependencies:
+      - target: Spark
 
   SparkDemo:
     type: application

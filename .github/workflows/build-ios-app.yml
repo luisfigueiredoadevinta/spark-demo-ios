@@ -8,8 +8,9 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: ruby/setup-ruby@v1
+      - uses: xavierLowmiller/xcodegen-action@1.1.2
         with:
-          ruby-version: '2.6'
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-      - run: bundle exec fastlane custom_lane
+          spec: project.yaml
+          quiet: false
+          version: '2.33.0'
+      - run: fastlane build_framework

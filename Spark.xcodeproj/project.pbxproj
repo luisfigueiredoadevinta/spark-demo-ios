@@ -9,15 +9,24 @@
 /* Begin PBXBuildFile section */
 		057E73104F741035D4197068 /* Spark.h in Headers */ = {isa = PBXBuildFile; fileRef = 77D7FD8FFC5740779583164D /* Spark.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		098AAFBA0A6BF36E10D29D9E /* SparkDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A1DCFACF66A2EAB88FC667 /* SparkDemoUITestsLaunchTests.swift */; };
+		137C73A0FFF88EAEE38B6B52 /* Spark.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 32F169EF1CB8E8E172FA8193 /* Spark.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2AE54B28791E15125BA3CE4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5998BDEF09E45203C92E1C2D /* Assets.xcassets */; };
 		3FBB7087AE3DC91DB48B6B04 /* SparkDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FFFDEF2682FB2BC9025443 /* SparkDemoUITests.swift */; };
 		4823797777A321399E3CADAD /* SparkDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD46F3AD3519339B7EE6329 /* SparkDemoApp.swift */; };
 		A03ECD4B6EB31264337DF080 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B321CBE818B017FD8E795B3B /* Preview Assets.xcassets */; };
 		A217A0A60EF9CEAC6291C637 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F011AD645DFE6E88B06EC4 /* ContentView.swift */; };
 		CB0D5D809AD769C13AC5FEC3 /* SparkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50322900BD7FBE1F80C3727 /* SparkTests.swift */; };
+		FC1E94E3853709855641B813 /* Spark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32F169EF1CB8E8E172FA8193 /* Spark.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		14815985FB55CDD61F7D300B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B892AFA3F6F32DFDE1F2917B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 876303B57E6FD004BCF64818;
+			remoteInfo = Spark;
+		};
 		EE6CDE7F398E1DD75FE93AEE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B892AFA3F6F32DFDE1F2917B /* Project object */;
@@ -26,6 +35,20 @@
 			remoteInfo = SparkDemo;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9A7EA4DDB4497EAA74D94CC6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				137C73A0FFF88EAEE38B6B52 /* Spark.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		11FFFDEF2682FB2BC9025443 /* SparkDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SparkDemoUITests.swift; sourceTree = "<group>"; };
@@ -45,6 +68,17 @@
 		DB6EC6BC0A907CE15983B2B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		EAD46F3AD3519339B7EE6329 /* SparkDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SparkDemoApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D7D122E12F201A177ADB20F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC1E94E3853709855641B813 /* Spark.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		0F94DB5C49D1B02080C9DC5B /* framework */ = {
@@ -208,10 +242,13 @@
 			buildConfigurationList = F450E97A1AFDBE38F05AF8F3 /* Build configuration list for PBXNativeTarget "SparkTests" */;
 			buildPhases = (
 				DA90D9AE5477805005BE5565 /* Sources */,
+				D7D122E12F201A177ADB20F0 /* Frameworks */,
+				9A7EA4DDB4497EAA74D94CC6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				31BFE0222D3FFC92EA09B82F /* PBXTargetDependency */,
 			);
 			name = SparkTests;
 			productName = SparkTests;
@@ -315,6 +352,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		31BFE0222D3FFC92EA09B82F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 876303B57E6FD004BCF64818 /* Spark */;
+			targetProxy = 14815985FB55CDD61F7D300B /* PBXContainerItemProxy */;
+		};
 		C2D0EDEA87E27A22D568AC43 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 12D9D50B663ACBACC9C1E6DB /* SparkDemo */;
