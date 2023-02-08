@@ -32,4 +32,11 @@ platform :ios do
       project: "Spark.xcodeproj",
     )
   end
+  lane :ui_tests do
+    scan(
+      clean: true,
+      scheme: "SparkDemo",
+      project: "Spark.xcodeproj",
+    )
+  end
 end
