@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: xavierLowmiller/xcodegen-action@1.1.2
         with:
-          spec: project.yaml
+          spec: project.yml
           quiet: false
           version: '2.33.0'
       - run: fastlane build_framework
