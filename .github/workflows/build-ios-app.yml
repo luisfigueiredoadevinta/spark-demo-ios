@@ -24,7 +24,7 @@ jobs:
           version: '2.33.0'
       - run: fastlane unit_tests
   ui_tests:
-    needs: build, unit_tests
+    needs: build
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
