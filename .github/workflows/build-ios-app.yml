@@ -13,7 +13,7 @@ jobs:
           spec: project.yml
           version: '2.33.0'
       - run: fastlane build_framework
-  unit_test:
+  unit_tests:
     needs: build
     runs-on: macos-latest
     steps:
@@ -22,9 +22,9 @@ jobs:
         with:
           spec: project.yml
           version: '2.33.0'
-      - run: fastlane unit_test
+      - run: fastlane unit_tests
   ui_tests:
-    needs: build
+    needs: build, unit_tests
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
